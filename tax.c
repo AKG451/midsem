@@ -7,4 +7,24 @@
 
 int main(){
 
+    double income,tax=0;
+     printf("Please enter your annual income: ");
+     scanf("%lf",&income);
+     if(income<0){
+        printf("Invalid input");
+     }
+     else if(income>0 && income<=250000){
+        tax = 0;
+     }
+     else if(income>250000 && income<=500000){
+        tax = (0.05*income);
+     }
+     else if(income>500000 && income<=1000000){
+        tax = (0.20*income);
+     }
+     else if(1000000<income){
+        tax = (0.30*income);
+     }
+  printf("You have to pay %.2f as taxes",tax);
+return 0;
 }
